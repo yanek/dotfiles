@@ -1,0 +1,12 @@
+version: '3'
+env:
+    HOME: '{{.CONFIG | default "/home/nk"}}'
+tasks:
+  default:
+    cmds:  
+      - stow --verbose --target=$HOME --restow */
+    silent: true
+
+  delete:
+    cmds:
+      - stow --verbose --target=$HOME --delete */
