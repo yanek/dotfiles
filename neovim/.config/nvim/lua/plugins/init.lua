@@ -13,13 +13,35 @@ return {
     end,
   },
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+    "smjonas/inc-rename.nvim",
+    config = function()
+      require("inc_rename").setup()
+    end,
+    lazy = false,
+    keys = {
+      {
+        "<leader>cr",
+        mode = { "n" },
+        function()
+          return ":IncRename " .. vim.fn.expand "<cword>"
+        end,
+        expr = true,
+        desc = "rename symbol"
+      },
+    },
+  },
+
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    opts = {},
+    -- stylua: ignore
+    keys = {
+      { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "flash" },
+      { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "flash Treesitter" },
+      { "r", mode = "o", function() require("flash").remote() end, desc = "remote flash" },
+      { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "treesitter search" },
+    },
+  },
 }
