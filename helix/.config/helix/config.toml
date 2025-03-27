@@ -4,6 +4,7 @@ theme = "nord"
 line-number = "relative"
 cursorline = true
 color-modes = true
+auto-format = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -12,3 +13,6 @@ select = "underline"
 
 [editor.indent-guides]
 render = true
+
+[keys.insert]
+j = { k = "normal_mode"}
