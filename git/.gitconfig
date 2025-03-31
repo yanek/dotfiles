@@ -1,0 +1,21 @@
+[init]
+	defaultBranch = main
+
+[user]
+	email = noe.ksiazek@pm.me
+	name = Noé Ksiazek
+
+[core]
+	editor = hx
+
+[url "https://github.com/"]
+	insteadOf = gh:
+
+[url "https://gist.github.com/"]
+    insteadOf = gist:
+
+[url "https://bitbucket.org/"]
+    insteadOf = bb:
+
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
