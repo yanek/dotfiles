@@ -18,8 +18,14 @@ end
 
 lspconfig.ols.setup {
   init_options = {
-    checker_args = "-vet -strict-style"
-  }
+    enable_hover = true,
+    enable_snippets = true,
+    enable_semantic_tokens = true,
+    enable_inlay_hints = true,
+    enable_rename = true,
+    enable_references = true,
+    checker_args = "-vet -strict-style",
+  },
 }
 
 -- configuring single server, example: typescript
