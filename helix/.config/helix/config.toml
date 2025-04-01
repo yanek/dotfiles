@@ -19,7 +19,7 @@ left = [ "mode", "spinner", "file-name", "read-only-indicator", "file-modificati
 cursor-line = "warning"
 
 [editor.lsp]
-display-inlay-hints = true
+display-inlay-hints = false
 
 [editor.cursor-shape]
 insert = "bar"
@@ -34,11 +34,12 @@ after-delay = { enable = true, timeout = 30000 }
 render = true
 
 [keys.insert]
-j = { k = "normal_mode"}
+C-s = [":write", "normal_mode"]
 
 [keys.normal]
+";" = "command_mode"
 C-s = ":write"
 C-w = ":buffer-close"
 tab = ":buffer-next"
 C-tab = ":buffer-previous"
-
+m = ":toggle-option soft-wrap.enable"
