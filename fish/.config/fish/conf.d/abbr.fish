@@ -13,3 +13,4 @@ abbr --add la ls -la
 # Git shortcuts
 abbr --add gs git status
 abbr --add gl git lg
+abbr --add gcm git commit -m
