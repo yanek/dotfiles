@@ -42,4 +42,6 @@ C-s = ":write"
 C-w = ":buffer-close"
 tab = ":buffer-next"
 C-tab = ":buffer-previous"
+
+[keys.normal.space]
 m = ":toggle-option soft-wrap.enable"
